@@ -48,7 +48,7 @@ module "sql_database" {
   location = var.location
   server_name = module.sql_server.sql_server_name
   storage_endpoint = module.storage_account.storage_account_endpoint
-  create_mode = .var.db_create_mode
+  create_mode = var.db_create_mode
   edition = var.db_edition[terraform.workspace]
   storage_account_access_key = module.storage_account.storage_account_access_key
   storage_account_access_key_is_secondary = var.storage_account_access_key_is_secondary
